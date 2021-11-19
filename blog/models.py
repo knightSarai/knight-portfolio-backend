@@ -21,7 +21,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     class Meta:
-        ordering = ('-published',)
+        ordering = ('-publish',)
 
     objects = models.Manager()
     published = PublishedManager()
@@ -34,7 +34,7 @@ class Post(models.Model):
         on_delete=models.CASCADE, related_name='blog_posts'
     )
     content = RichTextField(blank=True, null=True)
-    published = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(
