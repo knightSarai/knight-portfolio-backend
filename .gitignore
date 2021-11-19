@@ -183,3 +183,5 @@ dmypy.json
 .prof
 
 .idea
+
+.vscode

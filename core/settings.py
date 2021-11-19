@@ -17,6 +17,7 @@ import os
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,6 +32,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',
+#         'height': 300,
+#         'width': 300,
+#     },
+# }
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +50,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
+    'accounts',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -73,8 +88,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'blog',
+#         'USER': 'blog',
+#         'PASSWORD': '1200',
+#         'HOST': 'localhost'
+#     }
+# }
 
 DATABASES = {
     'default': {
@@ -121,6 +143,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

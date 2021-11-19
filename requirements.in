@@ -1,3 +1,5 @@
 django
 djangorestframework
 python-dotenv
+django-ckeditor
+
