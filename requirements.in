@@ -2,4 +2,5 @@ django
 djangorestframework
 python-dotenv
 django-ckeditor
-
+coverage
+django-cors-headers
