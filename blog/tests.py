@@ -4,7 +4,6 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from django.contrib.auth.models import User
 from blog.models import Post, Category, Comment
-from core import urls
 
 
 class TestCreatePost(TestCase):
