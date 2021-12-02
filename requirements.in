@@ -4,3 +4,4 @@ python-dotenv
 django-ckeditor
 coverage
 django-cors-headers
+djangorestframework-simplejwt

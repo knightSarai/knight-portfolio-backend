@@ -13,6 +13,7 @@ django==3.2.9
     #   -r requirements.in
     #   django-cors-headers
     #   djangorestframework
+    #   djangorestframework-simplejwt
 django-ckeditor==6.1.0
     # via -r requirements.in
 django-cors-headers==3.10.0
@@ -20,7 +21,13 @@ django-cors-headers==3.10.0
 django-js-asset==1.2.2
     # via django-ckeditor
 djangorestframework==3.12.4
+    # via
+    #   -r requirements.in
+    #   djangorestframework-simplejwt
+djangorestframework-simplejwt==5.0.0
     # via -r requirements.in
+pyjwt==2.3.0
+    # via djangorestframework-simplejwt
 python-dotenv==0.19.2
     # via -r requirements.in
 pytz==2021.3
